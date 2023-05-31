@@ -34,7 +34,9 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Visual 
 
+<h1 align="center">
 Note Taker Application Screenshots
+</h1>
 
 ![Application Screenshot #1](./Assets/challenge11-ss1.PNG)
 
