@@ -5,7 +5,7 @@ A Note Taker.
 
 ## Description
 
-This is a Note Taker application that is used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+This is a Note Taker application that is used to write and save notes. This application will use an Express.js Back-end and will save and retrieve note data from a JSON file. The Front-end was already created. The Back-end was then made by me.
 
 
 ## User Story
@@ -32,19 +32,24 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 
+## Installation
+
+To use this application install:
+```
+npm install
+npm run dev
+http://localhost:3000/
+```
+
+
 ## Visual 
 
-<h1 align="center">
-Note Taker Application Screenshots
-</h1>
+<h2 align="center">
+Note Taker Application Start Screenshot:
+</h2>
 
-![Application Screenshot #1](./Assets/challenge11-ss1.PNG)
-
-![Application Screenshot #2](./Assets/challenge11-ss2.PNG)
-
+![Application Screenshot](./Assets/ss-challenge11.PNG)
 
 ## Links
 
 [GitHub Repo](https://github.com/kitkatt17/Just-a-Note-Taker)
-
-[Deployed Heruko Link]()
