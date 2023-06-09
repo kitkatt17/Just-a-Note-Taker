@@ -38,7 +38,7 @@ To use this application install:
 ```
 npm install
 npm run dev
-http://localhost:3000/
+http://localhost:3000/ on browser
 ```
 
 
@@ -49,6 +49,7 @@ Note Taker Application Start Screenshot:
 </h2>
 
 ![Application Screenshot](./Assets/ss-challenge11.PNG)
+
 
 ## Links
 
