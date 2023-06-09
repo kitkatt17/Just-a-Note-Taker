@@ -2,7 +2,7 @@
 const app = express();
 const express = require('express');
 // The local host port
-const port = env.port || 3001;
+const PORT = env.PORT || 3001;
 const fs = require('fs');
 
 
@@ -10,15 +10,20 @@ const fs = require('fs');
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 const path = require('path');
-const router = require('./routes/htmlRoutes');
+// const router = require('./routes/htmlRoutes');
+
 
 // Connecting the url html to direct the user
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
+    res.sendFile(path.join(__dirname, './Main/public/notes.html'));
+});
+
+app.get('*', (res, req) => {
+    res.sendFile(path.join(__dirname, './Main/public/notes.html'));
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
+    res.sendFile(path.join(__dirname, './Main/public/index.html'));
     res.json(notes);
 });
 
@@ -75,12 +80,12 @@ app.use(express.static('public'));
 
 
 
-// Registering the routes
+// Registering the route middleware
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
 
 
 // App listener that starts the server
 app.listen(PORT, () => {
-    console.log(`Server is listening on port http://localhost:${port}`);
+    console.log(`Server is listening on port http://localhost:${PORT}`);
 });
