@@ -71,8 +71,7 @@ app.delete('/api/notes/:id', (req, res) => {
 // Middleware to parse request bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-    // app.get(express.urlencoded({ extended: true })); \\
-    // app.get(express.json()); \\
+
 
 
 // Static files from 'public' directory
