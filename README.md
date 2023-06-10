@@ -1,5 +1,7 @@
 ## Just-a-Note-Taker
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A Note Taker.
 
 
@@ -54,3 +56,14 @@ Note Taker Application Start Screenshot:
 ## Links
 
 [GitHub Repo](https://github.com/kitkatt17/Just-a-Note-Taker)
+
+[Deployed Heroku link]()
+
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[MIT License](https://opensource.org/license/mit-0/)
+
+For the full text of this license, please click on the link provided.

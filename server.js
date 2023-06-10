@@ -1,29 +1,38 @@
 // All required dependencies 
-const app = express();
 const express = require('express');
+const app = express();
+        // const express = require('express');
+let notes = require('./db/db.json')
 // The local host port
-const PORT = env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const fs = require('fs');
 
 
 // All routes
-const htmlRoutes = require('./routes/htmlRoutes');
-const apiRoutes = require('./routes/apiRoutes');
+
+// const htmlRoutes = require('./routes/htmlRoutes');
+// const apiRoutes = require('./routes/apiRoutes');
 const path = require('path');
 // const router = require('./routes/htmlRoutes');
 
 
+// Static files from 'public' directory
+app.use(express.static('public'));
+
+
 // Connecting the url html to direct the user
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, './Main/public/notes.html'));
+    console.log('sent notes.html')
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
-app.get('*', (res, req) => {
-    res.sendFile(path.join(__dirname, './Main/public/notes.html'));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, './Main/public/index.html'));
+    console.log('sent index.html');
+    res.sendFile(path.join(__dirname, '/public/index.html'));
     res.json(notes);
 });
 
@@ -68,20 +77,16 @@ app.delete('/api/notes/:id', (req, res) => {
 //     .catch((error) => response.status(500).json(error));
 // })
 
+
 // Middleware to parse request bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
 
-// Static files from 'public' directory
-app.use(express.static('public'));
-
-
-
 // Registering the route middleware
-require('./routes/htmlRoutes')(app);
-require('./routes/apiRoutes')(app);
+// require('./routes/htmlRoutes')(app);
+// require('./routes/apiRoutes')(app);
 
 
 // App listener that starts the server
