@@ -34,7 +34,7 @@ Then, deploy on Heroku
 Note Taker Application Start Screenshot:
 </h2>
 
-![Application Screenshot](./Assets/ss-challenge11.PNG)
+![Application Screenshot](./Assets/note-taker-ss.PNG)
 
 
 ## Links
